@@ -1,0 +1,42 @@
+.outerboder{
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 10px;
+    width: 600px;
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+.outerboder:hover{
+    transition: 0.5s ease-in-out;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.lbl_all{
+    font-weight:900;
+    font-size: large;
+    font-family:'Algerian';
+}
+.inp_tag{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid rgb(221, 221, 221);
+    width: 350px;
+    margin: 5px;
+    border-radius: 10px;
+    height: 30px;
+}
+.inp_tag:hover{
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn_all{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    color: green;
+    height: 25px;
+    margin: 5px;
+}
+.btn_all:hover{
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

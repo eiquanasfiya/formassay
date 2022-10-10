@@ -1,0 +1,40 @@
+<form [formGroup]="queForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="questions">
+      <div *ngFor="let que of questions().controls; let queIndex=index">
+        <div
+          [formGroupName]="queIndex"
+          class="outerboder"
+        >
+           <label class="lbl_all">Question {{queIndex}} :</label>
+          <input  class="inp_tag" type="text" formControlName="Task" />
+   
+          <button class="btn_all" style="color:red ;" (click)="removeQuestions(queIndex)" >Remove</button>
+   
+          <div formArrayName="options">
+            <div
+              *ngFor="let skill of questionOption(queIndex).controls; let optIndex=index"
+            >
+              <div [formGroupName]="optIndex">
+                <label class="lbl_all">Option {{optIndex}}:</label>
+                <input type="text" class="inp_tag" formControlName="option" />
+   
+                <button class="btn_all" style="color:red ;" (click)="removeQuestionOption(queIndex,optIndex)">
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn_all" (click)="addQuestionOption(queIndex)">
+            Add Option
+          </button>
+        </div>
+      </div>
+      <button type="button" class="btn_all" (click)="addQuestions() ">Add Question</button>
+      
+    </div>
+    <button class="btn_all" type="submit">submit</button>
+  </form>
+
+
+   
+  <!-- {{this.queForm.value | json}} -->
